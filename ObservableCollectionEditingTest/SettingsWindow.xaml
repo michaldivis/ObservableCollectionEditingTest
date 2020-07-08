@@ -1,0 +1,28 @@
+﻿<Window
+    x:Class="ObservableCollectionEditingTest.SettingsWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:ObservableCollectionEditingTest"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="SettingsWindow"
+    Width="600"
+    Height="400"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
+    <Border Padding="10">
+        <Grid>
+            <DataGrid
+                AutoGenerateColumns="True"
+                CanUserAddRows="False"
+                ItemsSource="{Binding People}" />
+            <Button
+                x:Name="btnAddPerson"
+                Padding="10"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                Click="btnAddPerson_Click"
+                Content="Add person" />
+        </Grid>
+    </Border>
+</Window>
